@@ -1,0 +1,62 @@
+{% extends './base.html' %}
+{% block link  %}
+{% endblock link  %}
+
+
+{% block adblock %}
+        <div class="main__admin__users">
+            <span class="bi_head">
+                <h1>Manage Users Account </h1>
+                <a href="">
+                    <p>Open an Account </p>
+                    <i class="bi bi-person "></i>
+                </a>
+            </span>
+            <big class="semi__head">
+
+                <h2>Register Users  </h2>
+                <small>Below is the list of registered Users and the other information</small>
+            </big>
+            <div class="main__form">
+                <a href="" class="pad col__red">Delete All</a>
+                <input type="text" placeholder="Search Here...">
+                <div class="div__hoder">
+                    <b>fullname</b>
+                    <b>password</b>
+                    <b>Pin</b>
+                    <b>balance </b>
+                    <b>Account number</b>
+                    <b>verify</b>
+                    <b>Date register</b>
+                    <b>Statue</b>
+                </div>
+                {% for i in userad %}
+                <span class="main__chide r" >
+                    <style>
+                        .main__chide b{
+                            word-wrap: break-word;
+                            word-break: break-all;
+                        }
+                    </style>
+                    <b>{{i.user.username}}</b>
+                    <b> <i class="bi bi-key"></i> {{i.password}}</b>
+                    <b>{{i.Pin}} </b>
+                    <b>{{i.balance}} USD</b>
+                    <b>{{i.AccountNUm}}</b>
+                    <b><i class="bi bi-exclamation-circle ic"></i>{{i.user.email}}</b>
+                    <b>{{i.user.last_join}}</b>
+                    <b class="ic">Active</b>
+                    <small class="over_s">
+                        <a href="{% url 'deleteuserc' i.uuid %}" title="delete Account"><i class="bi bi-trash"></i></a>
+                        <a href="{% url 'funuser' i.uuid %}"title="fund Account"><i class="bi bi-wallet"></i></a>
+                        <a href=""title="send mail "><i class="bi bi-envelope"></i></a>
+                        <a href="{% url 'adminautheditpersonal' i.uuid %}"title="Account Activities "><i class="bi bi-three-dots"></i></a>
+                    </small>
+                </span >
+                {% endfor  %}
+
+            </div>
+
+        </div>
+    </main>
+{% endblock adblock %}

@@ -1,0 +1,12 @@
+
+to copy in powershell
+Get-Content ~/.ssh/id_rsa.pub | Set-Clipboard
+
+generate key
+ssh-keygen -t rsa
+
+creating a new branh 
+git checkout -b new-branch
+git checkout -b feature-branch
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC0N96pVLJX5RQa4PAKb2nDsQg7BxZx6WVYeG9QUiozr3pJ2VXqiYnliKVDJVuqhP54uDdvOf7FcQlFz3d0H6ko0HUBESC6glzLE8iStgpHUavHkLwyUnBmeFCaeRhP5v91gER8QfUD0acxAe7FwAuT6YIZknYn8wwtOW5lFcVegMuKx1I3AjBvQH9ksReAmq084RBOPlivKCTd9zCK4r18IRO8PeBoONGqgLc15SW3kpMwPX+lB9FtCInYaKsX4hsd2QPKFBMQfaoOApxj3S+tTz/EhZMtLLbag3p91CXV1Yk3BiqHh6fR8HUc9LpEtHCVpcCap53eYa44hrp3AxY+UeYvtUUeVrw6VHA0tfSuGkIiSNaxdWIXngXUvVwuf7sV6KsFdKLtk59vCqPG1CLHkvYHo1QJ/0X4vjqUromuRzK/yOqX9Ed4NrSlUU1kfnYxgJvLTsFhSxcuUHUuyH4ih+ycSK2v2uSNNzE1A5TBBqNPhiO4N1BV7XIwNAKKhZ8= new user@DESKTOP-PGPR4CH
