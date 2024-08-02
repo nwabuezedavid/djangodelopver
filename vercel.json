@@ -1,40 +1,17 @@
+
+
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "passenger_wsgi.py",
-        "use": "@vercel/python",
-        "config": {
-          "maxLambdaSize": "50mb",
-          "runtime": "python3.9"  
+    "builds":[
+        {
+            "src": "banking/wsgi.py",
+            "use": "@vercel/python",
+            "config": {"maxLambdaSize":"15mb", "runtime":"python3.9"}
         }
-      }
     ],
-    "routes": [
-      {
-        "src": "/static/(.*)",
-        "dest": "/static/$1"
-      },
-      {
-        "src": "/media/(.*)",
-        "dest": "/media/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "passenger_wsgi.py"
-      }
-    ],
-    "env": {
-      "DJANGO_SETTINGS_MODULE": "banking.settings",
-      
-      "SECRET_KEY": "d(qg&phv8f!$plsl!p+r0e*_uo8o!tw(h4k!jn+g#*--5@o+*3" ,  
-      "DEBUG": "false",
-      "EMAIL_HOST": "firstunitytrust.com",
-      "EMAIL_HOST_USER": "support@firstunitytrust.com",
-      "EMAIL_HOST_PASSWORD": "nwabueze666$",
-      "EMAIL_PORT": "465",
-      "EMAIL_USE_SSL": "true",
-      "ALLOWED_HOSTS": ".vercel.app"
-    }
-  }
-  
+    "routes":[
+        {
+            "src":"/(.*)",
+            "dest":"banking/wsgi.py"
+        }
+    ]
+}
