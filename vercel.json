@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "manage.py",
+        "src": "passenger_wsgi.py",
         "use": "@vercel/python",
         "config": {
           "maxLambdaSize": "50mb",
@@ -21,7 +21,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "manage.py"
+        "dest": "passenger_wsgi.py"
       }
     ],
     "env": {
