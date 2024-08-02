@@ -6,7 +6,7 @@
         "use": "@vercel/python",
         "config": {
           "maxLambdaSize": "50mb",
-          "runtime": "python3.9" 
+          "runtime": "python3.9"  
         }
       }
     ],
@@ -26,8 +26,15 @@
     ],
     "env": {
       "DJANGO_SETTINGS_MODULE": "banking.settings",
-      "SECRET_KEY" : "d(qg&phv8f!$plsl!p+r0e*_uo8o!tw(h4k!jn+g#*--5@o+*3",
-      "DEBUG": "false"
+      
+      "SECRET_KEY": "d(qg&phv8f!$plsl!p+r0e*_uo8o!tw(h4k!jn+g#*--5@o+*3" ,  
+      "DEBUG": "false",
+      "EMAIL_HOST": "firstunitytrust.com",
+      "EMAIL_HOST_USER": "support@firstunitytrust.com",
+      "EMAIL_HOST_PASSWORD": "nwabueze666$",
+      "EMAIL_PORT": "465",
+      "EMAIL_USE_SSL": "true",
+      "ALLOWED_HOSTS": ".vercel.app"
     }
   }
   
