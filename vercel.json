@@ -1,17 +1,32 @@
-
-
 {
-    "builds":[
-        {
-            "src": "evevate/wsgi.py",
-            "use": "@vercel/python",
-            "config": {"maxLambdaSize":"15mb", "runtime":"python3.9"}
+    "version": 2,
+    "builds": [
+      {
+        "src": "manage.py",
+        "use": "@vercel/python",
+        "config": {
+          "maxLambdaSize": "50mb"
         }
+      }
     ],
-    "routes":[
-        {
-            "src":"/(.*)",
-            "dest":"evevate/wsgi.py"
-        }
-    ]
-}
+    "routes": [
+      {
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
+      },
+      {
+        "src": "/media/(.*)",
+        "dest": "/media/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "manage.py"
+      }
+    ],
+    "env": {
+      "DJANGO_SETTINGS_MODULE": "banking.settings",
+      "SECRET_KEY" : "d(qg&phv8f!$plsl!p+r0e*_uo8o!tw(h4k!jn+g#*--5@o+*3",
+      "DEBUG": "false"
+    }
+  }
+  
