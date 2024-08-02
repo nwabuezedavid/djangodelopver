@@ -31,7 +31,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST_PASSWORD = "nwabueze666$" 
 EMAIL_PORT = 465 
 EMAIL_USE_SSL = True
-ALLOWED_HOSTS = ["www.firstunitytrust.com",'firstunitytrust.com']
+ALLOWED_HOSTS = [".vercel.app"]
+
 
  
 # Application definition
